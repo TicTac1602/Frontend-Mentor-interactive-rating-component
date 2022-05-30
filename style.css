@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    --orange : hsl(25, 97%, 53%);
+    --white:hsl(0, 0%, 100%);
+    --light-grey:hsl(217, 12%, 63%);
+    --medium-grey:hsl(216, 12%, 54%);
+    --dark-blue:hsl(213, 19%, 18%);
+    --very-dark-blue:hsl(216, 12%, 8%);
+}
+.attribution{
+    position: fixed;
+    bottom: 0;
+    opacity: 0;
+}
+.attribution:hover{
+    opacity: 1;
+}
+body{
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    overflow-x: hidden;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 350px;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: var(--dark-blue);
+    color: white;
+}
+#rating{
+    transition: all .5s ease-in-out;
+    transform: translateX(50%);
+}
+#rating img{
+    border-radius: 50%;
+    padding: 8px;
+    background: rgba(225, 225, 225, .1);
+    box-shadow: rgba(167, 167, 167, 0.35) 0px 5px 15px;
+}
+#rating.switch{
+    opacity: 0;
+    transform: translateX(-50%);
+}
+h1{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+p{
+    color: var(--light-grey);
+    font-size: 15px;
+    margin-bottom: 1.5em;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.buttons button{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    color: var(--light-grey);
+    background: rgba(225, 225, 225, .1);
+    margin-bottom: 1em;
+}
+.button{
+    transition: all 0.2s ease-in-out;
+}
+.button:hover{
+    background-color: var(--orange);
+    color:var(--white);
+}
+.button.active {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+.submit{
+    width: 100%;
+    outline: none;
+    border-radius: 30px;
+    padding: 1rem 0;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Second card design */
+
+#thanks{
+    opacity: 0;
+    transform: translateX(50%);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all ease-in-out 1s;
+}
+#thanks.switch{
+    opacity: 1;
+    transform: translateX(-50%);
+}
+#thanks img{
+    margin-bottom: 2em;
+}
+.value-given{
+    color: var(--orange);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    background: rgba(225, 225, 225, .1);
+    margin-bottom: 0;
+}
